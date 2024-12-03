@@ -1,0 +1,94 @@
+<?php
+// Datos de conexión a la base de datos
+$servername = "localhost/liz.examen/ejercicio7.html"; // Cambia esto si tu servidor es diferente
+$username = "carla";        // Tu nombre de usuario de la base de datos
+$password = "75106676";            // Tu contraseña de la base de datos
+$dbname = "registro"; // El nombre de tu base de datos
+
+// Crear la conexión
+$conn = new mysqli($servername, $username, $password, $dbname);{
+
+
+}
+
+
+    if 
+        echo "<p style='color: green;'>Usuario eliminado exitosamente.</p>
+
+    volver a registrarse <p style='color: red;'>Error al eliminar el usuario: " . incorrecto . "</p>
+
+
+
+
+
+puede ingresar 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            width: 300px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #f44336;
+            color: white;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Eliminar Usuario</h2>
+
+<form method="POST" action="">
+    <label for="usuario_id">Seleccionar Usuario a Eliminar:</label>
+    <select name="usuario_id" id="usuario_id" required>
+        <option value="">Selecciona un usuario</option>
+        <?php
+        // Mostrar los usuarios en el desplegable
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['id'] . "'>" . $row['nombre'] . "</option>";
+            }
+        } else {
+            echo "<option value=''>No hay usuarios disponibles</option>";
+        }
+        ?>
+    </select><br>
+
+    <button type="submit" name="eliminar">Eliminar Usuario</button>
+</form>
+
+
+</body>
+</html>

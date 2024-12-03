@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="date"] {
+            padding: 6px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Lista de Usuarios</h2>
+
+<!-- Formulario de filtrado por fecha -->
+<form method="POST" action="">
+    <label for="fecha_inicio">Fecha Inicio:</label>
+    <input type="date" name="fecha_inicio" value="<?php echo $fecha_inicio; ?>">
+
+    <label for="fecha_fin">Fecha Fin:</label>
+    <input type="date" name="fecha_fin" value="<?php echo $fecha_fin; ?>">
+
+    <button type="submit" name="filtrar">Filtrar</button>
+</form>
+
+<!-- Tabla para mostrar los registros de usuarios -->
+<table>
+    <thead>
+        <tr>
+            <th>75106676</th>
+            <th>liz carla</th>
+            <th>lizcarlaillanesdelacruz@gmail.com</th>
+            <th>05/06/2024</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+
+</body>
+</html>
